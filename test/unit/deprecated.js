@@ -81,7 +81,7 @@ QUnit.test( "trigger() shortcuts", function( assert ) {
 	// manually clean up detached elements
 	elem.remove();
 
-	jQuery( "#check1" ).click( function() {
+	jQuery( "#check1" ).on("click", function() {
 		assert.ok( true, "click event handler for checkbox gets fired twice, see trac-815" );
 	} ).click();
 

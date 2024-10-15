@@ -109,20 +109,20 @@ $(function(){
 
 	// Tests can be activated separately or in combination to check for interference
 
-	$("#hoverbox button").click(function(){
+	$("#hoverbox button").on("click",function(){
 		$("#hoverbox")
 			.data({ ins: 0, outs: 0 })
 			.hover( countIns, countOuts );
 		$(this).remove();
 	});
-	$("#delegateenterbox button").click(function(){
+	$("#delegateenterbox button").on("click",function(){
 		$("html")
 			.find("#delegateenterbox").data({ ins: 0, outs: 0 }).end()
 			.delegate("#delegateenterbox", "mouseenter", countIns )
 			.delegate("#delegateenterbox", "mouseleave", countOuts );
 		$(this).remove();
 	});
-	$("#liveenterbox button").click(function(){
+	$("#liveenterbox button").on("click",function(){
 		$("#liveenterbox")
 			.data({ ins: 0, outs: 0 })
 			.live("mouseenter", countIns )
@@ -130,21 +130,21 @@ $(function(){
 		$(this).remove();
 	});
 
-	$("#overbox button").click(function(){
+	$("#overbox button").on("click",function(){
 		$("#overbox")
 			.data({ ins: 0, outs: 0 })
 			.bind("mouseover", countIns )
 			.bind("mouseout", countOuts );
 		$(this).remove();
 	});
-	$("#liveoverbox button").click(function(){
+	$("#liveoverbox button").on("click",function(){
 		$("#liveoverbox")
 			.data({ ins: 0, outs: 0 })
 			.live("mouseover", countIns )
 			.live("mouseout", countOuts );
 		$(this).remove();
 	});
-	$("#delegateoverbox button").click(function(){
+	$("#delegateoverbox button").on("click",function(){
 		$(document)
 			.find("#delegateoverbox").data({ ins: 0, outs: 0 }).end()
 			.delegate("#delegateoverbox", "mouseover", countIns )

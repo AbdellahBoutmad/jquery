@@ -17,7 +17,7 @@
 	</style>
 	<script src="jquery.js"></script>
 	<script type="text/javascript">
-	$("button").live("click", function () {
+ $(document).on("click", "button", function () {
 		$.ajax({
 			url: '/',
 			error: function() {

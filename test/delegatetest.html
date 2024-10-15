@@ -199,7 +199,7 @@ jQuery.fn.blink = function() {
 };
 
 jQuery.fn.addSubmitTest = function( id, prevent ) {
-	return this.live( "submit", function( e ) {
+	return this.on( "submit", function( e ) {
 		if ( prevent ) {
 			e.preventDefault();
 		}
